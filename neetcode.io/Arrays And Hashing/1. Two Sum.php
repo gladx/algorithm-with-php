@@ -1,5 +1,6 @@
 <?php
 
+// Time = O(n^2)
 function twoSum($nums, $target)
 {
     $bound = count($nums);
@@ -13,5 +14,21 @@ function twoSum($nums, $target)
                 return [$i, $j];
             }
         }
+    }
+}
+
+// Time = O(n)
+function twoSumV2($nums, $target)
+{
+    $bound = count($nums);
+    $array = [];
+    for ($i = 0; $i < $bound; $i++) {
+        $remind = $target - $nums[$i];
+
+        if(isset($array[$remind])) {
+            return [$array[$remind], $i];
+        }
+
+        $array[$nums[$i]] = $i;
     }
 }
