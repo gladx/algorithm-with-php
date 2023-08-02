@@ -1,0 +1,6 @@
+{
+    
+    "require": {
+        "maddhatter/markdown-table": "^1.2"
+    }
+}
